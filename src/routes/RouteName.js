@@ -3,7 +3,7 @@ const RouteName = {
   GET_STARTED_SLIDER_SCREEN: "GetstartedSliderscreen",
   ABOUT_SELF_SCREEN: "AboutSelfScreen",
   AGE_SCREEN: "AgeScreen",
-  TRLANSTION_SCREEN: "TranslationScreen",
+  TRANSLATION_SCREEN: "TranslationScreen",
   WEIGHT_SCREEN: "WeightScreen",
   GOAL_SCREEN: "GoalScreen",
   WE_HELP_SCREEN: "WeHelpScreen",
