@@ -10,11 +10,12 @@ import {
   MeditationScreen,
 } from "../screens";
 import { AppHeader, ColorPicker } from "../components";
-import { Colors, Fonts, SF } from "../utils";
+import { Colors, SF } from "../utils";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { Text } from "react-native";
 import VectorIcon from "../components/commonComponents/VectoreIcons";
 import { useTranslation } from "react-i18next";
+import { Fonts } from "../utils/Fonts";
 
 const SideNavigator = (props) => {
   const { t } = useTranslation();
