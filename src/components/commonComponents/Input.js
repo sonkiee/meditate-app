@@ -1,8 +1,9 @@
-import React, { useMemo } from 'react';
-import propTypes from 'prop-types';
-import { View, StyleSheet } from 'react-native';
-import { SF, SH, SW, Fonts, Colors } from '../../utils';
-import { Input } from 'react-native-elements';
+import React, { useMemo } from "react";
+import propTypes from "prop-types";
+import { View, StyleSheet } from "react-native";
+import { SF, SH, SW, Colors } from "../../utils";
+import { Input } from "react-native-elements";
+import { Fonts } from "../../utils/Fonts";
 
 function Inputs({
   title,
@@ -26,23 +27,22 @@ function Inputs({
   containerStyle,
   onEndEditing,
   inputContainerStyle,
-  numberOfLines
+  numberOfLines,
 }) {
- 
   const styles = useMemo(
     () =>
       StyleSheet.create({
-        container: { width: '100%', ...containerStyle, marginBottom: SH(0), },
+        container: { width: "100%", ...containerStyle, marginBottom: SH(0) },
         inputContainerStyle: {
           borderBottomWidth: SH(0),
           width: "100%",
-          ...inputContainerStyle
+          ...inputContainerStyle,
         },
         input_style: {
-          width: '100%',
+          width: "100%",
           borderColor: Colors.gray_text_color,
           fontSize: SF(17),
-          fontWeight: '600',
+          fontWeight: "600",
           marginBottom: SH(0),
           fontFamily: Fonts.Poppins_Medium,
           color: Colors.black_text_color,
@@ -54,26 +54,26 @@ function Inputs({
           ...inputStyle,
         },
         labelStyle: {
-          width: '100%',
+          width: "100%",
           fontSize: SF(18),
           color: Colors.black_text_color,
           fontFamily: Fonts.Poppins_Medium,
           paddingHorizontal: SW(5),
           ...titleStyle,
-          fontWeight: '500',
+          fontWeight: "500",
           paddingVertical: SH(2),
         },
         placeholderStyle: {
           fontSize: SF(19),
           color: Colors.theme_backgound,
-          fontFamily: Fonts.Poppins_Medium
+          fontFamily: Fonts.Poppins_Medium,
         },
         errorStyle: {
           color: Colors.theme_backgound,
           fontFamily: Fonts.Poppins_Regular,
         },
       }),
-    [title, titleStyle, inputStyle, Colors],
+    [title, titleStyle, inputStyle, Colors]
   );
   return (
     <View style={styles.container}>
@@ -90,7 +90,7 @@ function Inputs({
         onFocus={() => onFocus()}
         onBlur={() => onBlur()}
         autoFocus={autoFocus}
-        keyboardType={!inputType ? 'default' : inputType}
+        keyboardType={!inputType ? "default" : inputType}
         secureTextEntry={secureTextEntry}
         value={value}
         selectionColor={Colors.theme_backgound}
@@ -107,20 +107,19 @@ function Inputs({
 }
 
 Inputs.defaultProps = {
-  title: '',
-  placeholder: '',
+  title: "",
+  placeholder: "",
   titleStyle: {},
   inputStyle: {},
-  onChangeText: () => { },
-  onFocus: () => { },
-  onBlur: () => { },
-  value: '',
+  onChangeText: () => {},
+  onFocus: () => {},
+  onBlur: () => {},
+  value: "",
   textprops: {},
   inputprops: {},
   inputType: null,
-  autoCompleteType: '',
-  onEndEditing: () => { },
-
+  autoCompleteType: "",
+  onEndEditing: () => {},
 };
 
 Inputs.propTypes = {
