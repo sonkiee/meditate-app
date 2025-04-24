@@ -86,7 +86,7 @@ const GetstartedSliderscreen = (props) => {
         <View style={GetstartedSliderStyles.buttonCircle}>
           <Button
             title={t("Let_started")}
-            onPress={() => navigation.navigate(RouteName.TRLANSTION_SCREEN)}
+            onPress={() => navigation.navigate(RouteName.TRANSLATION_SCREEN)}
           />
         </View>
       </View>

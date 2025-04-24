@@ -66,7 +66,7 @@ const RootNavigator = (props) => {
         />
         <Stack.Screen name={RouteName.HOME_SCREEN} component={SideNavigator} />
         <Stack.Screen
-          name={RouteName.TRLANSTION_SCREEN}
+          name={RouteName.TRANSLATION_SCREEN}
           component={TranslationScreen}
         />
       </Stack.Navigator>
