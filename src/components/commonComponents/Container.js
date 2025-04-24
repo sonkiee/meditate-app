@@ -1,8 +1,9 @@
-import { SafeAreaView, StyleSheet, View } from 'react-native';
-import React, { useMemo } from 'react';
-import propTypes from 'prop-types';
-import { useTheme } from '@react-navigation/native';
-import LinearGradient from 'react-native-linear-gradient';
+import { SafeAreaView, StyleSheet, View } from "react-native";
+import React, { useMemo } from "react";
+import propTypes from "prop-types";
+import { useTheme } from "@react-navigation/native";
+import { LinearGradient } from "expo-linear-gradient";
+
 function ContainerComponent({
   children,
   fullScreen,
@@ -22,10 +23,10 @@ function ContainerComponent({
           backgroundColor: Colors.transpharent,
         },
         linearGradient: {
-          flex: 1
+          flex: 1,
         },
       }),
-    [Colors],
+    [Colors]
   );
   return fullScreen ? (
     <View style={[styles.containerStyle, { ...containerPropStyle }]}>
@@ -36,15 +37,21 @@ function ContainerComponent({
       <LinearGradient
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 1 }}
-        colors={[Colors.theme_linear_gradient_1, Colors.theme_linear_gradient_2, Colors.theme_linear_gradient_3, Colors.theme_linear_gradient_4, Colors.theme_linear_gradient_2, Colors.theme_linear_gradient_4, Colors.theme_linear_gradient_2]}
-        style={styles.linearGradient}>
+        colors={[
+          Colors.theme_linear_gradient_1,
+          Colors.theme_linear_gradient_2,
+          Colors.theme_linear_gradient_3,
+          Colors.theme_linear_gradient_4,
+          Colors.theme_linear_gradient_2,
+          Colors.theme_linear_gradient_4,
+          Colors.theme_linear_gradient_2,
+        ]}
+        style={styles.linearGradient}
+      >
+        <SafeAreaView style={[styles.statusBarStyle, { statusBarPropStyle }]} />
         <SafeAreaView
-          style={[
-            styles.statusBarStyle,
-            { statusBarPropStyle },
-          ]}
-        />
-        <SafeAreaView style={[styles.containerStyle, { ...containerPropStyle }]}>
+          style={[styles.containerStyle, { ...containerPropStyle }]}
+        >
           {children}
         </SafeAreaView>
       </LinearGradient>
