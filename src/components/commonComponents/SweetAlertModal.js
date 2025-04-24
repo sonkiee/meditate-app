@@ -6,6 +6,7 @@ import LottieIcon from "./LottieIcon";
 import propTypes from "prop-types";
 import images from "../../index";
 import { useTheme } from "@react-navigation/native";
+import { LinearGradient } from "expo-linear-gradient";
 // import LinearGradient from 'react-native-linear-gradient';
 
 function SweetaelertModal(props) {
