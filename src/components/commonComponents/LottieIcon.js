@@ -5,7 +5,14 @@ import { StyleSheet } from "react-native";
 function LottieIcon(props) {
   const { style, source, loop = true } = props;
 
-  return <LottieView style={style} source={source} autoPlay loop={loop} />;
+  return (
+    <LottieView
+      style={style}
+      source={source || require("../../images/lottieAnimation/Tick.json")}
+      autoPlay
+      loop={loop}
+    />
+  );
 }
 
 export default LottieIcon;
